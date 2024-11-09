@@ -7,12 +7,19 @@ ImageNet-100
 Data file Structure:
 
 data1
+
     --class1
+
         --*.jpeg
+
         --*.jpeg
+
     --class2
+
         --*.jpeg
+
         --*.jpeg
+        
     ...
 
 *_demo files are for debugging
@@ -27,4 +34,5 @@ dataloader_demo.ipynb is same as dataloader.ipynb (with a smaller batch_size), b
 
 
 Current issues:
+
     ● dataloader.py has path issues and causes runtime errors, but same script in dataloader.ipynb works fine
