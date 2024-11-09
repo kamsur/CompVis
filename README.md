@@ -6,21 +6,21 @@ ImageNet-100
 
 Data file Structure:
 
-data1
+    data1
 
-    --class1
+        --class1
 
-        --*.jpeg
+            --*.jpeg
 
-        --*.jpeg
+            --*.jpeg
 
-    --class2
+        --class2
 
-        --*.jpeg
+            --*.jpeg
 
-        --*.jpeg
-        
-    ...
+            --*.jpeg
+            
+        ...
 
 *_demo files are for debugging
 
