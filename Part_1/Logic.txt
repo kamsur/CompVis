@@ -1,15 +1,8 @@
-# CompVis
- Project for Computational Visual Perception course at FAU
-
-## Part 1-Implementation of age-dependent infant color sensitivity
-
-### Paper description
+#Implementation of age-dependent infant color sensitivity
 
 During the experiment carried out in the paper "Systematic Measurement of Human Neonatal Color Vision" by RUSSELL J. et. al., 1993, the authors take infant subjects of various ages, and present them with pairs of color cards. One with a color of a certain wavelength and other with achromatic(gray) color of equivalent luminosity.
 
 If less than 50% of infants of age x (in months) are able to differentiate between the two, the age category is branded as insensitive to that color. If more than 50% can find the difference, that age category is considered sensitive to that color. If the proportion is around 50%, the results are considered inconclusive and the sensitivity is considered transitive.
-
-### Algorithmic logic
 
 To implement similar perception algorithmically, we first map the color wavelengths used in the experiment to a corresponding hue angle on HSL color wheel. So blue (475 nm) is mapped to 225 degrees, green (520 nm) is mapped to 135 degrees, yellow (580 nm) is mapped to 60 degrees, red (660 nm) is mapped to 330 degrees.
 
@@ -23,42 +16,5 @@ We run this dataloader for three batches of 100 images each, for each age catego
 
 Since the authors of the paper did not test the color perception in magenta range in the experiment, we divided the magenta region between reddish and bluish region with corresponding sensitivity.
 
-The resulting image transformations and runtimes are presented in images in dataloader_demo.ipynb file.
+The resulting image transformations and runtimes are presented in images below.
 
-### Dataset
-ImageNet-100
-
-### Data file Structure:
-
-    data1
-
-        --class1
-
-            --*.jpeg
-
-            --*.jpeg
-
-        --class2
-
-            --*.jpeg
-
-            --*.jpeg
-            
-        ...
-
-### Miscellaneous
-
-*_demo files are for debugging
-
-dataloader.ipynb and data.py are for final submission
-
-data_demo.py and data.py are exactly same, except data_demo passes the original image as well as transformed image. So dataloader_demo.ipynb can show an example of how the transformation looks like compared to original
-
-dataloader.ipynb and dataloader.py are the same scripts. They only print out the average loading time for 100 images in each age category and display the different loading times as a graph
-
-dataloader_demo.ipynb is same as dataloader.ipynb (with a smaller batch_size), but it also displays example image pairs for comparison of transforms
-
-
-### Current issues:
-
-    ● dataloader.py has path issues and causes runtime errors, but same script in dataloader.ipynb works fine
