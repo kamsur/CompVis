@@ -1,0 +1,17 @@
+# Dataset Implementation:
+
+I built a custom PyTorch dataset class called InfantVision.
+It takes a subset of images and applies a Gaussian blur depending on the "age" we assign to each image.
+The idea is to simulate how infants have blurry vision at a younger age and sharper vision as they grow older.
+
+## How the Blur Works:
+    I defined specific blur levels (sigma values) for different age groups. For example:
+      Newborns (0-2 months) have maximum blur.
+      By 12 months, there’s no blur at all.
+    The dataset applies the blur dynamically while loading the data.
+
+## Handling Transformations:
+    I made the code flexible by allowing a toggle (use_transform) to turn the blur on or off. This was useful for testing and makes the dataset reusable.
+
+## Age Assignment:
+    I randomly assigned an age (like 0, 2, 4, etc.) to each image in a subset of 100 images. These ages control how much blur each image gets.
