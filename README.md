@@ -19,7 +19,7 @@ Now the decrease in sensitivity is simulated by decreasing the saturation. The s
 
 During batch processing, the dataloader takes one image from the dataset, then converts all RGB values to corresponding HSL value at pixel-level. For each pixel, based on hue and saturation, corresponding saturation_decrease_factor is calculated, and multiplied with saturation value. The saturation value thus changes while hue and luminosity remain unchanged. Then these new HSL values are converted back to RGB values for each pixel.
 
-We run this dataloader for three batches of 100 images each, for each age category from 0 to 3 months (0 months being a newborn and 3 months being the age of complete sensitivity for all colors, according to the paper). We thus get, the average runtime for the dataloader for each age category with limited sensitivity and can compare it with the runtime for age of 3 months, with no change in image perception required, hence no transformation of image required.
+We run this dataloader for four batches of 100 images each, for each age category from 0 to 3 months (0 months being a newborn and 3 months being the age of complete sensitivity for all colors, according to the paper). We thus get, the average runtime for the dataloader for each age category with limited sensitivity and can compare it with the runtime for age of 3 months, with no change in image perception required, hence no transformation of image required.
 
 Since the authors of the paper did not test the color perception in magenta range in the experiment, we divided the magenta region between reddish and bluish region with corresponding sensitivity.
 
